@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smethurst Masonry - Professional Stone & Brick Craftsmanship</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .hero {
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                repeating-linear-gradient(
+                    0deg,
+                    #c84c3c 0px,
+                    #c84c3c 60px,
+                    #e8dcc8 60px,
+                    #e8dcc8 68px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    #c84c3c 0px,
+                    #c84c3c 200px,
+                    #e8dcc8 200px,
+                    #e8dcc8 208px
+                );
+            background-size: 100% 100%, 100% 100%, 100% 68px;
+            background-position: 0 0, 0 0, 0 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                repeating-linear-gradient(
+                    90deg,
+                    transparent 0px,
+                    transparent 200px,
+                    #e8dcc8 200px,
+                    #e8dcc8 208px
+                );
+            background-size: 416px 68px;
+            background-position: 104px 68px;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, transparent, white);
+        }
+
+        .hero-content {
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.5);
+            color: #1a252f;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+            color: #1a252f;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #e74c3c;
+            color: #1a252f;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .cta-button:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.6);
+        }
+
+        .section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #2c3e50;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: #e74c3c;
+        }
+
+        .about-content {
+            display: block;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .specializations {
+            background: #f8f9fa;
+        }
+
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .spec-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .spec-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .spec-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .spec-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .spec-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .why-card {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .why-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+
+        .why-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .why-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        footer a {
+            color: #e74c3c;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Smethurst Masonry</h1>
+            <p>Crafting Excellence in Stone & Brick Since 1985</p>
+            <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});">Get Your Free Quote</button>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Our Story</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p style="margin-bottom: 20px;">
+                    Founded in 1985, Smethurst Masonry has been a trusted name in quality craftsmanship throughout Delaware and Maryland for nearly 40 years. I began in this industry as the young guy hauling buckets and pushing wheelbarrows, but it didn't take long for me to realize the true artistry behind masonry. What started as an entry-level job quickly became a lifelong passion—one that still drives me every day, even now in my late 60s.
+                </p>
+                <p style="margin-bottom: 20px;">
+                    Early on, I adopted a simple mindset that still guides our team today: treat every project as if it were our own home. That commitment to care and excellence has allowed us to serve thousands of satisfied clients and build a reputation grounded in integrity, skill, and unwavering attention to detail.
+                </p>
+                <p style="margin-bottom: 20px;">
+                    Today, Smethurst Masonry blends time-honored techniques with modern innovations to deliver work that truly stands the test of time—far beyond the "basic, cut-and-dry" approach of many landscaping-turned-masonry companies. From historic restorations to contemporary designs, we bring passion, precision, and collaboration to every brick laid and every stone set.
+                </p>
+                <p>
+                    One core belief guides our process: the design should match the goals. Your vision matters, and we take the time to understand it so we're not just building something sturdy—we're building something that reflects exactly what you had in mind.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section specializations">
+        <h2 class="section-title">What We Specialize In</h2>
+        <div class="spec-grid">
+            <div class="spec-card">
+                <div class="spec-icon">🧱</div>
+                <h3>Brick & Stone Work</h3>
+                <p>Custom brickwork, stone veneer, and natural stone installations that add timeless beauty and value to your property.</p>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon">🏠</div>
+                <h3>Residential Masonry</h3>
+                <p>From outdoor patios and fireplaces to retaining walls and driveways, we create stunning outdoor living spaces.</p>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon">🏢</div>
+                <h3>Commercial Projects</h3>
+                <p>Large-scale commercial masonry including facades, structural walls, and architectural stonework for businesses.</p>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon">🔧</div>
+                <h3>Restoration & Repair</h3>
+                <p>Expert restoration services for historic buildings and repair work that seamlessly matches existing masonry.</p>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon">🌿</div>
+                <h3>Hardscaping</h3>
+                <p>Complete outdoor transformations including walkways, garden walls, and decorative stonework.</p>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon">✨</div>
+                <h3>Custom Design</h3>
+                <p>Unique, one-of-a-kind masonry features designed to reflect your personal style and architectural vision.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Why Choose Us</h2>
+        <div class="why-us-grid">
+            <div class="why-card">
+                <div class="why-number">39+</div>
+                <h3>Years of Experience</h3>
+                <p>Nearly four decades of mastering our craft and serving Delaware and Maryland with exceptional workmanship.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-number">100%</div>
+                <h3>Quality Guaranteed</h3>
+                <p>We stand behind every project with comprehensive warranties and a commitment to your complete satisfaction.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-number">★★★★★</div>
+                <h3>Top-Rated Service</h3>
+                <p>Proudly creating thousands of happy clients by turning their visions into reality and bringing cherished restorations back to life.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-number">$$$</div>
+                <h3>Fair Pricing</h3>
+                <p>Transparent quotes with no hidden fees. We provide exceptional value without compromising on quality.</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="contact" style="background: #2c3e50; color: white; text-align: center; padding: 40px 20px;">
+        <h3 style="margin-bottom: 20px;">Ready to Start Your Project?</h3>
+        <p style="margin-bottom: 20px;">Contact us today for a free consultation and quote</p>
+        <p>📞 For Bill: (302) 893-5779 | For Will: (443) 907-5541</p>
+        <p>✉️ Bill@smethurstmasonry.com</p>
+        <p style="margin-top: 30px; font-size: 0.9rem;">© 2024 Smethurst Masonry. All rights reserved.</p>
+    </div>
+</body>
+</html>
