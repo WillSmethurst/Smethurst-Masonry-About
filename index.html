@@ -14,34 +14,33 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-               color: #333;
-}
+            color: #333;
+        }
 
-.hero {
-    background: 
-        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url('Brick-Wall.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    position: relative;
-    overflow: hidden;
-}
+        .hero {
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url('Brick-Wall.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: transparent;
-}
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: transparent;
         }
 
         .hero::after {
@@ -77,35 +76,35 @@
             margin-bottom: 20px;
             font-weight: 700;
             text-shadow: 2px 2px 4px rgba(255,255,255,0.5);
-            color: #1a252f;
+            color: #3a4a5c;
         }
 
         .hero p {
             font-size: 1.5rem;
             margin-bottom: 30px;
             text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
-            color: #1a252f;
+            color: #3a4a5c;
         }
 
         .cta-button {
             display: inline-block;
             padding: 15px 40px;
-            background: #e74c3c;
-            color: #1a252f;
+            background: #c19a4a;
+            color: #3a4a5c;
             text-decoration: none;
             font-size: 1.2rem;
             border-radius: 50px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+            box-shadow: 0 4px 15px rgba(193, 154, 74, 0.4);
             border: none;
             cursor: pointer;
             font-family: inherit;
         }
 
         .cta-button:hover {
-            background: #c0392b;
+            background: #a17d3a;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.6);
+            box-shadow: 0 6px 20px rgba(193, 154, 74, 0.6);
         }
 
         .section {
@@ -118,7 +117,7 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 50px;
-            color: #2c3e50;
+            color: #3a4a5c;
             position: relative;
             padding-bottom: 15px;
         }
@@ -131,7 +130,7 @@
             transform: translateX(-50%);
             width: 100px;
             height: 4px;
-            background: #e74c3c;
+            background: #c19a4a;
         }
 
         .about-content {
@@ -143,19 +142,6 @@
         .about-text {
             font-size: 1.1rem;
             line-height: 1.8;
-        }
-
-        .about-image {
-            width: 100%;
-            height: 400px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
         .specializations {
@@ -186,7 +172,7 @@
             width: 80px;
             height: 80px;
             margin: 0 auto 20px;
-            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            background: #3a4a5c;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -198,7 +184,7 @@
         .spec-card h3 {
             font-size: 1.5rem;
             margin-bottom: 15px;
-            color: #2c3e50;
+            color: #3a4a5c;
         }
 
         .spec-card p {
@@ -220,14 +206,14 @@
         .why-number {
             font-size: 3rem;
             font-weight: 700;
-            color: #e74c3c;
+            color: #c19a4a;
             margin-bottom: 10px;
         }
 
         .why-card h3 {
             font-size: 1.3rem;
             margin-bottom: 15px;
-            color: #2c3e50;
+            color: #3a4a5c;
         }
 
         .why-card p {
@@ -235,21 +221,13 @@
             line-height: 1.6;
         }
 
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        footer a {
-            color: #e74c3c;
-            text-decoration: none;
-        }
-
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
             }
 
             .section-title {
@@ -272,7 +250,7 @@
         <div class="about-content">
             <div class="about-text">
                 <p style="margin-bottom: 20px;">
-                    Founded in 1985, Smethurst Masonry has been a trusted name in quality craftsmanship throughout Delaware and Maryland for nearly 40 years. I began in this industry as the young guy hauling buckets and pushing wheelbarrows, but it didn't take long for me to realize the true artistry behind masonry. What started as an entry-level job quickly became a lifelong passion—one that still drives me every day, even now in my late 60s.
+                    Founded in 1985, Smethurst Masonry has been a trusted name in quality craftsmanship throughout Delaware, Maryland and Pennsylvania for nearly 40 years. I began in this industry as the young guy hauling buckets and pushing wheelbarrows, but it didn't take long for me to realize the true artistry behind masonry. What started as an entry-level job quickly became a lifelong passion—one that still drives me every day, even now in my late 60s.
                 </p>
                 <p style="margin-bottom: 20px;">
                     Early on, I adopted a simple mindset that still guides our team today: treat every project as if it were our own home. That commitment to care and excellence has allowed us to serve thousands of satisfied clients and build a reputation grounded in integrity, skill, and unwavering attention to detail.
@@ -329,7 +307,7 @@
             <div class="why-card">
                 <div class="why-number">39+</div>
                 <h3>Years of Experience</h3>
-                <p>Nearly four decades of mastering our craft and serving Delaware and Maryland with exceptional workmanship.</p>
+                <p>Nearly four decades of mastering our craft and serving Delaware, Maryland and Pennsylvania with exceptional workmanship.</p>
             </div>
             <div class="why-card">
                 <div class="why-number">100%</div>
@@ -349,12 +327,12 @@
         </div>
     </section>
 
-    <div id="contact" style="background: #2c3e50; color: white; text-align: center; padding: 40px 20px;">
+    <div id="contact" style="background: #3a4a5c; color: white; text-align: center; padding: 40px 20px;">
         <h3 style="margin-bottom: 20px;">Ready to Start Your Project?</h3>
         <p style="margin-bottom: 20px;">Contact us today for a free consultation and quote</p>
         <p>📞 For Bill: (302) 893-5779 | For Will: (443) 907-5541</p>
-        <p>✉️ Bill@smethurstmasonry.com</p>
-        <p style="margin-top: 30px; font-size: 0.9rem;">© 2024 Smethurst Masonry. All rights reserved.</p>
+        <p>✉️ <a href="mailto:Bill@smethurstmasonry.com" style="color: #c19a4a; text-decoration: none;">Bill@smethurstmasonry.com</a></p>
+        <p style="margin-top: 30px; font-size: 0.9rem;">© 2026 Smethurst Masonry. All rights reserved.</p>
     </div>
 </body>
 </html>
